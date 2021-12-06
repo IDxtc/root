@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget -qO- -O /etc/ssh/sshd_config https://raw.githubusercontent.com/sarmidisawq/scxtc/main/sshd_config;
+wget -qO- -O /etc/ssh/sshd_config https://raw.githubusercontent.com/ryadhisa909/root/main/sshd_config;
 systemctl restart sshd;
 clear;
 echo -e "Masukkan Password:";
