@@ -6,10 +6,6 @@ fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
-clear
-if [ -f "/etc/v2ray/domain" ]; then
-echo "Script Already Installed"
-exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
