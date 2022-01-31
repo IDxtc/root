@@ -1745,7 +1745,7 @@ EOF
 		"clients": [
 		  {
 			"password": "${uuid}",
-			"email": "${domain}_trojan_tcp"
+			"email": "${domain}"
 		  }
 		],
 		"fallbacks":[
@@ -1767,7 +1767,7 @@ EOF
 
 	# VLESS_WS_TLS
 	if echo "${selectCustomInstallType}" | grep -q 1 || [[ "$1" == "all" ]]; then
-		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'ws","dest":31297,"xver":1}'
+		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'","dest":31297,"xver":1}'
 		cat <<EOF >/etc/v2ray-agent/v2ray/conf/03_VLESS_WS_inbounds.json
 {
 "inbounds":[
@@ -1780,7 +1780,7 @@ EOF
     "clients": [
       {
         "id": "${uuid}",
-        "email": "${domain}_VLESS_WS"
+        "email": "${domain}_"
       }
     ],
     "decryption": "none"
@@ -1790,7 +1790,7 @@ EOF
     "security": "none",
     "wsSettings": {
       "acceptProxyProtocol": true,
-      "path": "/${customPath}ws"
+      "path": "/${customPath}"
     }
   }
 }
@@ -1817,7 +1817,7 @@ EOF
                 "clients": [
                     {
                         "password": "${uuid}",
-                        "email": "${domain}_trojan_gRPC"
+                        "email": "${domain}"
                     }
                 ],
                 "fallbacks": [
@@ -1829,7 +1829,7 @@ EOF
             "streamSettings": {
                 "network": "grpc",
                 "grpcSettings": {
-                    "serviceName": "${customPath}trojangrpc"
+                    "serviceName": "${customPath}"
                 }
             }
         }
@@ -1840,7 +1840,7 @@ EOF
 
 	# VMess_WS
 	if echo "${selectCustomInstallType}" | grep -q 3 || [[ "$1" == "all" ]]; then
-		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'vws","dest":31299,"xver":1}'
+		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'","dest":31299,"xver":1}'
 		cat <<EOF >/etc/v2ray-agent/v2ray/conf/05_VMess_WS_inbounds.json
 {
 "inbounds":[
@@ -1855,7 +1855,7 @@ EOF
         "id": "${uuid}",
         "alterId": 0,
         "add": "${add}",
-        "email": "${domain}_vmess_ws"
+        "email": "${domain}"
       }
     ]
   },
@@ -1864,7 +1864,7 @@ EOF
     "security": "none",
     "wsSettings": {
       "acceptProxyProtocol": true,
-      "path": "/${customPath}vws"
+      "path": "/${customPath}"
     }
   }
 }
@@ -1887,7 +1887,7 @@ EOF
                 {
                     "id": "${uuid}",
                     "add": "${add}",
-                    "email": "${domain}_VLESS_gRPC"
+                    "email": "${domain}"
                 }
             ],
             "decryption": "none"
@@ -1895,7 +1895,7 @@ EOF
         "streamSettings": {
             "network": "grpc",
             "grpcSettings": {
-                "serviceName": "${customPath}grpc"
+                "serviceName": "${customPath}"
             }
         }
     }
@@ -1917,7 +1917,7 @@ EOF
      {
         "id": "${uuid}",
         "add":"${add}",
-        "email": "${domain}_VLESS_TLS-direct_TCP"
+        "email": "${domain}"
       }
     ],
     "decryption": "none",
@@ -2129,7 +2129,7 @@ EOF
 		"clients": [
 		  {
 			"password": "${uuid}",
-			"email": "${domain}_trojan_tcp"
+			"email": "${domain}"
 		  }
 		],
 		"fallbacks":[
@@ -2151,7 +2151,7 @@ EOF
 
 	# VLESS_WS_TLS
 	if echo "${selectCustomInstallType}" | grep -q 1 || [[ "$1" == "all" ]]; then
-		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'ws","dest":31297,"xver":1}'
+		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'","dest":31297,"xver":1}'
 		cat <<EOF >/etc/v2ray-agent/xray/conf/03_VLESS_WS_inbounds.json
 {
 "inbounds":[
@@ -2164,7 +2164,7 @@ EOF
     "clients": [
       {
         "id": "${uuid}",
-        "email": "${domain}_VLESS_WS"
+        "email": "${domain}"
       }
     ],
     "decryption": "none"
@@ -2174,7 +2174,7 @@ EOF
     "security": "none",
     "wsSettings": {
       "acceptProxyProtocol": true,
-      "path": "/${customPath}ws"
+      "path": "/${customPath}"
     }
   }
 }
@@ -2201,7 +2201,7 @@ EOF
                 "clients": [
                     {
                         "password": "${uuid}",
-                        "email": "${domain}_trojan_gRPC"
+                        "email": "${domain}"
                     }
                 ],
                 "fallbacks": [
@@ -2213,7 +2213,7 @@ EOF
             "streamSettings": {
                 "network": "grpc",
                 "grpcSettings": {
-                    "serviceName": "${customPath}trojangrpc"
+                    "serviceName": "${customPath}"
                 }
             }
         }
@@ -2224,7 +2224,7 @@ EOF
 
 	# VMess_WS
 	if echo "${selectCustomInstallType}" | grep -q 3 || [[ "$1" == "all" ]]; then
-		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'vws","dest":31299,"xver":1}'
+		fallbacksList=${fallbacksList}',{"path":"/'${customPath}'","dest":31299,"xver":1}'
 		cat <<EOF >/etc/v2ray-agent/xray/conf/05_VMess_WS_inbounds.json
 {
 "inbounds":[
@@ -2239,7 +2239,7 @@ EOF
         "id": "${uuid}",
         "alterId": 0,
         "add": "${add}",
-        "email": "${domain}_vmess_ws"
+        "email": "${domain}"
       }
     ]
   },
@@ -2248,7 +2248,7 @@ EOF
     "security": "none",
     "wsSettings": {
       "acceptProxyProtocol": true,
-      "path": "/${customPath}vws"
+      "path": "/${customPath}"
     }
   }
 }
@@ -2271,7 +2271,7 @@ EOF
                 {
                     "id": "${uuid}",
                     "add": "${add}",
-                    "email": "${domain}_VLESS_gRPC"
+                    "email": "${domain}"
                 }
             ],
             "decryption": "none"
@@ -2279,7 +2279,7 @@ EOF
         "streamSettings": {
             "network": "grpc",
             "grpcSettings": {
-                "serviceName": "${customPath}grpc"
+                "serviceName": "${customPath}"
             }
         }
     }
@@ -2302,7 +2302,7 @@ EOF
         "id": "${uuid}",
         "add":"${add}",
         "flow":"xtls-rprx-direct",
-        "email": "${domain}_VLESS_XTLS/TLS-direct_TCP"
+        "email": "${domain}"
       }
     ],
     "decryption": "none",
@@ -2361,7 +2361,7 @@ initTrojanGoConfig() {
     },
     "websocket": {
         "enabled": true,
-        "path": "/${customPath}tws",
+        "path": "/${customPath}",
         "host": "${domain}",
         "add":"${add}"
     },
