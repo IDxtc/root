@@ -3098,8 +3098,6 @@ addUser() {
 			echo "${vmessWsResult}" | jq . >${configPath}05_VMess_WS_inbounds.json
 		fi
 
-		fi
-
 		if echo ${currentInstallProtocolType} | grep -q 6; then
 			local vmessgRPCUsers="${users//\"flow\":\"xtls-rprx-direct\"\,/}"
 			vmessgRPCUsers="${vmessgRPCUsers//\,\"alterId\":0/}"
