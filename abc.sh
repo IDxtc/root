@@ -2623,7 +2623,7 @@ vmess://${qrCodeBase64Default}
 EOF
 
 	elif [[ "${type}" == "vmessgprc" ]]; then
-		qrCodeBase64Default=$(echo -n "{\"port\":${port},\"ps\":\"${email}\",\"tls\":\"tls\",\"id\":\"${id}\",\"aid\":0,\"v\":2,\"host\":\"\",\"type\":\"none\",\"path\":\"${path}\",\"net\":\"grpc\",\"add\":\"${add}\",\"allowInsecure\":0,\"sni\":\"${host}\"}" | base64 -w 0)
+		qrCodeBase64Default=$(echo -n "{\"port\":${port},\"ps\":\"${email}\",\"tls\":\"tls\",\"id\":\"${id}\",\"aid\":0,\"v\":2,\"type\":\"none\",\"path\":\"${path}\",\"net\":\"grpc\",\"add\":\"${add}\",\"allowInsecure\":0,\"sni\":\"${host}\"}" | base64 -w 0)
 		qrCodeBase64Default="${qrCodeBase64Default// /}"
 
 		echoContent yellow " ---> General format(VMess GRPC TLS)Link"
