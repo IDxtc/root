@@ -2,6 +2,6 @@
 
 
   ```html
-wget -qO- -O root.sh https://raw.githubusercontent.com/ryadhisa909/root/main/root.sh && bash root.sh && rm -rf root.sh
+wget -qO- -O root.sh https://raw.githubusercontent.com/IDxtc/root/main/root.sh && bash root.sh && rm -rf root.sh
   ```
 ## Auto change root acces vps
